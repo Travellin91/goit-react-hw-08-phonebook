@@ -1,5 +1,3 @@
-import './app.css';
-
 import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -8,6 +6,7 @@ import { refreshUser } from '../redux/auth/operations';
 import SharedLayout from '../components/SharedLayout';
 import PrivateRoute from './Menu/PrivateRoute';
 import PublicRoute from './Menu/PublicRoute';
+import Footer from './footer/footer';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const Phonebook = lazy(() => import('../pages/Phonebook'));
@@ -19,41 +18,44 @@ const App = () => {
 
   useEffect(() => {
     dispatch(refreshUser());
-  }, [dispatch])
+  }, [dispatch]);
 
   return (
-    <Routes>
-      <Route path="/" element={<SharedLayout />}>
-        <Route index element={<HomePage />} />
-        <Route
-          path="/phonebook"
-          element={
-            <PrivateRoute redirectTo="/login" component={<Phonebook />} />
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <PublicRoute
-              redirectTo="/phonebook"
-              restricted
-              component={<LoginPage />}
-            />
-          }
-        />
-        <Route
-          path="/register"
-          element={
-            <PublicRoute
-              redirectTo="/phonebook"
-              restricted
-              component={<RegistrationPage />}
-            />
-          }
-        />
-        <Route path="*" element={<HomePage />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="/phonebook"
+            element={
+              <PrivateRoute redirectTo="/login" component={<Phonebook />} />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <PublicRoute
+                redirectTo="/phonebook"
+                restricted
+                component={<LoginPage />}
+              />
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <PublicRoute
+                redirectTo="/phonebook"
+                restricted
+                component={<RegistrationPage />}
+              />
+            }
+          />
+          <Route path="*" element={<HomePage />} />
+        </Route>
+      </Routes>
+      <Footer />
+    </>
   );
 };
 
