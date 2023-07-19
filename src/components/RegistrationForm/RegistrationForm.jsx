@@ -35,7 +35,7 @@ const RegistrationForm = () => {
         <span className="labelTitle">Пароль:</span>
         <input className="inputTag" type="password" name="password" />
       </label>
-      <Button title="Create account" type="submit" />
+      <Button title="Створити аккаунт" type="submit" />
     </StyledForm>
   );
 };
