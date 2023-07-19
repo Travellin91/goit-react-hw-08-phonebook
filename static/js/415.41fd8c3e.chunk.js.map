@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/415.41fd8c3e.chunk.js","mappings":"4JAEA,UAFiB,WAAH,OAAS,wBAAI,uOAAgD,C","sources":["pages/Home.jsx"],"sourcesContent":["const HomePage = () => <h1>Ласкаво просимо до додатку Телефонна книга</h1>;\n\nexport default HomePage;"],"names":[],"sourceRoot":""}
