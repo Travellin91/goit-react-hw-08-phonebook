@@ -6,7 +6,6 @@ import { refreshUser } from '../redux/auth/operations';
 import SharedLayout from '../components/SharedLayout';
 import PrivateRoute from './Menu/PrivateRoute';
 import PublicRoute from './Menu/PublicRoute';
-import Footer from './footer/footer';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const Phonebook = lazy(() => import('../pages/Phonebook'));
@@ -54,7 +53,6 @@ const App = () => {
           <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
-      <Footer />
     </>
   );
 };

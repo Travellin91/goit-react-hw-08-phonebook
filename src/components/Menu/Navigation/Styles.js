@@ -14,7 +14,8 @@ const hoverAnimation = keyframes`
 
 export const StyledNavigation = styled.nav`
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   font-weight: 500;
 
