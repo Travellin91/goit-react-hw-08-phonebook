@@ -1,3 +1,4 @@
+import React from 'react';
 import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -6,6 +7,7 @@ import { refreshUser } from '../redux/auth/operations';
 import SharedLayout from '../components/SharedLayout';
 import PrivateRoute from './Menu/PrivateRoute';
 import PublicRoute from './Menu/PublicRoute';
+import Footer from './Footer/Footer';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const Phonebook = lazy(() => import('../pages/Phonebook'));
@@ -53,6 +55,7 @@ const App = () => {
           <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
+      <Footer />
     </>
   );
 };
