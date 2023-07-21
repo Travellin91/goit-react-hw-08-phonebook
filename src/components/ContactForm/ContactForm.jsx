@@ -62,14 +62,13 @@ const ContactForm = () => {
           className="inputTag"
           type="tel"
           name="number"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          pattern="^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$"
           title="Номер телефону повинен містити лише цифри і може містити пробіли, тире, дужки та може починатися з +"
           onChange={handleChange}
           value={number}
           required
         />
-      </label>
-
+      </label>\
       <Button title="Добавити контакт" type="submit" />
     </StyledForm>
   );
