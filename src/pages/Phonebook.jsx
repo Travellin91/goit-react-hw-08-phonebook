@@ -1,7 +1,7 @@
 import ContactForm from '../components/ContactForm';
 import ContactList from '../components/ContactsList';
 import SearchInput from '../components/SearchInput';
-import Section from '../components/Section';
+import Section from '../components/Section/Section';
 
 const Phonebook = () => {
   return (
