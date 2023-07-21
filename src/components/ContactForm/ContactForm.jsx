@@ -49,8 +49,8 @@ const ContactForm = () => {
           className="inputTag"
           type="text"
           name="name"
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          pattern="[a-zA-Zа-яА-Я]+([' -][a-zA-Zа-яА-Я]+)*"
+          title="Ім'я може містити лише літери, апостроф, тире та пробіли. Наприклад, Адріан, Джейкоб Мерсер, Шарль де Бац де Кастельмор д'Артаньян."
           onChange={handleChange}
           value={name}
           required
@@ -62,8 +62,8 @@ const ContactForm = () => {
           className="inputTag"
           type="tel"
           name="number"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          pattern="\+?\d{1,4}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Номер телефону повинен містити лише цифри і може містити пробіли, тире, дужки та може починатися з +"
           onChange={handleChange}
           value={number}
           required
